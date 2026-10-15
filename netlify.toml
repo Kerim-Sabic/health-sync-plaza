@@ -1,0 +1,24 @@
+# Netlify: TanStack Start builds through Nitro's netlify preset (detected automatically).
+# Static files land in dist/; server rendering runs as the function in .netlify/functions-internal.
+# Settings here override the site's UI build settings.
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # These Supabase values are public by design: the project ID is the subdomain of the
+  # public API URL, and the publishable key ships in every browser bundle (data is
+  # protected by row-level security). Real secrets are still scanned for.
+  SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_PROJECT_ID,VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY,SUPABASE_PROJECT_ID,SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY"
+
+# The service worker must always be re-checked so updates reach installed apps.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

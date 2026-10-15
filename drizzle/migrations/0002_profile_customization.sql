@@ -1,0 +1,4 @@
+ALTER TABLE public.profiles ADD COLUMN IF NOT EXISTS bio text, ADD COLUMN IF NOT EXISTS avatar_path text;
+CREATE POLICY "Owners upload profile avatars" ON storage.objects FOR INSERT TO authenticated WITH CHECK (bucket_id = 'profile-avatars' AND (storage.foldername(name))[1] = auth.uid()::text);
+CREATE POLICY "Owners delete profile avatars" ON storage.objects FOR DELETE TO authenticated USING (bucket_id = 'profile-avatars' AND (storage.foldername(name))[1] = auth.uid()::text);
+CREATE POLICY "Visible profiles have readable avatars" ON storage.objects FOR SELECT TO authenticated USING (bucket_id = 'profile-avatars' AND EXISTS (SELECT 1 FROM public.profiles p WHERE p.avatar_path = name));

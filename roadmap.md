@@ -1,0 +1,18 @@
+# Roadmap — design director brief (screens one by one)
+- [x] Profile customization for every role: name, goal, bio, private photo; real-account bio/photo save-reload-cleanup passed. Summary labels/charts enlarged and clarified, 375/390/1440px checked. Barcode lookup/portion/food save and camera-denied/unknown-code fallback passed; physical camera scanning requires a device check. 10 relevant tests passed.
+- [x] Coach workflow: collapsed searchable program library, create-and-assign custom client programs, profile switch to own logging view; demo creation/assignment/edit and own meal save/readback checked at 375/390/1440px, 18 relevant tests passed; real coach writes remain untested
+- [x] Today: streak flame, pulsing readiness ring, advice + "go 10% lighter", single glowing Start, insight cards
+- [x] Live session: progression chip, est. 1RM, plate calculator, rest island pill, PR moment, swipe-delete, designed confirm, sound
+- [x] Session complete: count-up, body map, share card
+- [x] Train: peek/snap program days, estimated-max detail with PR markers, collapsible weeks; checked at 375/390/1440px and 130% text
+- [x] Fuel: reviewed repeat meals, recent-food suggestions, liquid glasses; original nutrition unchanged; demo flows + signed-in read checked at 375/390/1440px, 130% text and reduced motion
+- [x] Recover: 7/14-night sleep scrubbing, timed breathing with pause/restart, journal overview; original records preserved; demo saves + signed-in reads checked at 375/390/1440px, 130% text and reduced motion
+- [x] Progress: weight scrubbing, weekly recap stories, derived milestones; existing weight history/photos/reports unchanged; demo and signed-in reads checked at 375/390/1440px and 130% text
+- [x] Coach plans: weight, rest, RPE, tempo and notes; edit same plan; demo edits reopened and verified in assigned client session; existing RLS retained, real-account plan writes not exercised
+- [x] Coach: attention-first overview, compliance rings, searchable attention filter, reviewed swipe/button kudos and assigned-plan editing; demo kudos read back in Notes and client Today, plan edits saved/reopened; 375/390/1440px, 130% text and reduced motion checked; signed-in client reads OK, real coach writes untested (available account is a client)
+- [x] Session lifecycle: pause/auto-pause, end sheet, unfinished/stale/conflict sheets, keypad, set types, exercise menu + picker, wake lock, rest notifications, editable history with Undo, Today aware; demo 375px walkthrough passed
+- [x] Landing: cinematic hero, desktop scrollytelling with a sticky phone, principles, closing call to action; testimonials render once real quotes are added
+- [x] Readability: larger labels/numbers, brighter secondary text, corrected type-scale merging; client/coach screens and session/editor checked, data unchanged
+- [x] System: Obsidian/Porcelain tokens, /styleguide, motion tokens, grain, radii audit, light theme, desktop sidebar, command palette
+- [x] Premium: two-way messages, weekly check-ins, coach welcome message, PWA (icons, manifest, offline shell, install card)
+- [ ] Next: habits, calendar and scheduling, Web Push, offline write queue, voice notes and video form checks, exercise video library, guided demo tour

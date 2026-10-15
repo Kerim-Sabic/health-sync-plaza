@@ -1,0 +1,60 @@
+[33mcommit 28afe2405fbc67cb5be49bdb5358f8dc85bac176[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author:     Kerim Sabic <kerim@horalix.com>
+AuthorDate: Thu Oct 15 02:35:57 2026 +0200
+Commit:     Kerim Sabic <kerim@horalix.com>
+CommitDate: Thu Oct 15 02:35:57 2026 +0200
+
+    Netlify: allow public Supabase values in secrets scanning
+    
+    The project ID is the subdomain of the public Supabase URL and the
+    publishable key ships in every browser bundle, so Netlify's scanner
+    flagged expected values. Only these six keys are omitted; real secrets
+    are still scanned.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+[33mcommit a16d988d58942b3cb3843d9e7ff7dad6a3480415[m
+Author:     Kerim Sabic <kerim@horalix.com>
+AuthorDate: Thu Oct 15 02:32:46 2026 +0200
+Commit:     Kerim Sabic <kerim@horalix.com>
+CommitDate: Thu Oct 15 02:32:46 2026 +0200
+
+    Fix Netlify deploy: publish dist and add netlify.toml
+    
+    Nitro's netlify preset writes static files to dist/ and the server function
+    to .netlify/functions-internal; the site was publishing dist/client, which
+    never exists. Also never cache sw.js so app updates reach installed apps.
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+[33mcommit 17568266a1c5a47cf72d1dda0034a9dd5b1a72f5[m
+Author:     Kerim Sabic <kerim@horalix.com>
+AuthorDate: Thu Oct 15 02:25:46 2026 +0200
+Commit:     Kerim Sabic <kerim@horalix.com>
+CommitDate: Thu Oct 15 02:25:46 2026 +0200
+
+    Premium redesign: design system, motion, screens, messaging, check-ins, PWA
+    
+    - Obsidian (dark) and Porcelain (light) design tokens, materials, type scale,
+      radii and a dev-only /styleguide; refined primitives in ui.tsx
+    - Shared motion language (src/lib/motion.ts) and haptics map (feedback.ts);
+      directional page transitions, morphing tab bar, fan-out log hub, desktop
+      sidebar, command palette, edge-swipe back and pull-to-refresh
+    - Rebuilt Today, live session (split into session/), Train, Fuel, Recover,
+      Progress, coach overview, client detail, programs, landing, auth, onboarding
+    - Two-way coach/client messages on trainer_notes and weekly check-ins
+      (migration 0003, Api methods, demo implementations)
+    - PWA: manifest, generated icons, offline shell service worker, install card
+    - Prettier formatting across src; generated files excluded from lint
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+[33mcommit 5946767b2d2722e09015b7bc279a85f391a052b2[m
+Author:     Kerim Sabic <kerim@horalix.com>
+AuthorDate: Thu Oct 15 00:53:55 2026 +0200
+Commit:     Kerim Sabic <kerim@horalix.com>
+CommitDate: Thu Oct 15 00:53:55 2026 +0200
+
+    Initial commit
+    
+    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
